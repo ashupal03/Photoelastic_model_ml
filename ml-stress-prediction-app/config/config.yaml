@@ -1,0 +1,38 @@
+# Project Configuration File
+
+# Paths
+paths:
+  project_root: "./"
+  data_dir: "./data"
+  raw_data_dir: "./data/raw"
+  processed_data_dir: "./data/processed"
+  models_dir: "./models"
+  logs_dir: "./logs"
+
+# Materials and Properties
+materials:
+  Polycarbonate: 6.3e-12
+  Epoxy: 3.4e-12
+  Bakelite: 2.9e-12
+  Araldite: 4.0e-12
+  Acrylic: 2.6e-12
+
+# Model Parameters
+model:
+  input_shape: [256, 256, 1]
+  batch_size: 32
+  epochs: 50
+  learning_rate: 0.001
+  test_split: 0.2
+  validation_split: 0.1
+
+# Image Processing Parameters
+image_processing:
+  target_size: [256, 256]
+  clahe_clip: 2.0
+  clahe_tile_size: [8, 8]
+  blur_kernel: [5, 5]
+  canny_threshold1: 50
+  canny_threshold2: 150
+  frangi_min_sigma: 1
+  frangi_max_sigma: 10
